@@ -37,6 +37,8 @@ or specific component scripts to your project.
 
 ## controller
 
+**Author:** [@msub2](https://github.com/msub2)
+
 Smooth locomotion character controller for VR.
 
 | Param | Type | Description |
@@ -53,6 +55,8 @@ Smooth locomotion character controller for VR.
 | snapDegrees | Int | Incremements to snap to when `rotationType` is `"snap"`, default `45` |
 
 ## line-connection
+
+**Author:** [@Squareys](https://github.com/squareys)
 
 Draw a line between two objects by scaling a mesh (e.g. a cube) and rotating it accordingly.
 
