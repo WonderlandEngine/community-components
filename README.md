@@ -70,3 +70,26 @@ Draw a line between two objects by scaling a mesh (e.g. a cube) and rotating it 
 **Requirements:**
 
  - Expects a mesh component attached to the same object
+
+## waypoint-movement
+
+**Author:** [@Srile](https://github.com/srile)
+
+Moves an object along a path made up of multiple points.
+
+| Param | Type | Description |
+|---|---|---|
+| pathObject | Object | Container of the waypoints. The position of its children indicate the points. |
+| speed | Float | Movement speed of the object |
+| curveDistance | Float | Distance in normal space [0, 0.5) after which the objects starts moving on a curve (used for smooth corners) |
+
+**Callbacks**
+ - `addOnFinalWaypointReachedCallback(f)`/`removeOnFinalWaypointReachedCallback(f)` can be used for function callback registration and are fired when the object reaches the end destination.
+
+**Requirements:**
+
+ - pathObject's children are sorted by alphebetical ascending naming (e.g. A, B, C, D, E, F, ...)
+
+**Notes**
+
+ - `lookAt` will be replaced with a native function in the future.
