@@ -45,7 +45,7 @@ WL.registerComponent('waypoint-movement', {
       this.fromPosition = this.positions[0];
       this.toPosition = this.positions[1];
       glMatrix.vec3.sub(this.currentPosition, this.toPosition, this.fromPosition);
-      this.fromTolength = glMatrix.vec3.length(this.currentPosition);
+      this.fromToLength = glMatrix.vec3.length(this.currentPosition);
       this.currentLength = 0;
       this.up = [0, 1, 0];
       this.quat = new Float32Array(4);
@@ -122,12 +122,12 @@ WL.registerComponent('waypoint-movement', {
       this.fromPosition = this.positions[0];
       this.toPosition = this.positions[1];
       glMatrix.vec3.sub(this.currentPosition, this.toPosition, this.fromPosition);
-      this.fromTolength = glMatrix.vec3.length(this.currentPosition);
+      this.fromToLength = glMatrix.vec3.length(this.currentPosition);
     },
     update: function(dt) {
       this.currentLength += dt * this.speed;
 	  // factor indicates the percentage of how much of a given distance between two points has already been traversed
-      let factor = this.currentLength / this.fromTolength;
+      let factor = this.currentLength / this.fromToLength;
 	  // Check if it is the curve point, if it is, don't increment the index of curves
       if(factor > 0.5 && this.currentPositionIndex != this.positions.length - 1) {
         this.incrementCurveIndex = true;
@@ -157,7 +157,7 @@ WL.registerComponent('waypoint-movement', {
       this.object.setTranslationWorld(this.currentPosition);
 
       // Checks wether the waypoint has been passed
-      if(this.currentLength > this.fromTolength){
+      if(this.currentLength > this.fromToLength){
         this.start = false;
         this.currentPositionIndex++
         // Checks if the final waypoint has been reached
@@ -171,7 +171,7 @@ WL.registerComponent('waypoint-movement', {
         this.fromPosition = this.positions[this.currentPositionIndex];
         this.toPosition = this.positions[this.currentPositionIndex + 1];
         glMatrix.vec3.sub(this.currentPosition, this.toPosition, this.fromPosition);
-        this.fromTolength = glMatrix.vec3.length(this.currentPosition);
+        this.fromToLength = glMatrix.vec3.length(this.currentPosition);
         this.currentLength = 0;
       }
     },
