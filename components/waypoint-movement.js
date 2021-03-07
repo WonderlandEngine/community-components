@@ -178,7 +178,7 @@ WL.registerComponent('waypoint-movement', {
 });
 
 // lookAt function will be replaced by an internal function in the future.
-function lookAt() {
+const lookAt = (function() {
 	let forwardTemp = new Float32Array(3);
 	let temp = new Float32Array(3);
 	let dotTemp = 0;
@@ -257,4 +257,4 @@ function lookAt() {
 
 	  return quaternion;
 	}
-}
+})();
