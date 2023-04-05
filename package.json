@@ -1,0 +1,42 @@
+{
+    "name": "@wonderlandengine/community-components",
+    "version": "1.0.0-rc.1",
+    "description": "Custom components created by the Wonderland Engine Community!",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build:ts": "tsc",
+        "build:ts:watch": "tsc --watch",
+        "prepublishOnly": "npm run build:ts",
+        "pretty": "prettier --config ./prettierrc.json --write ./components"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WonderlandEngine/community-components.git"
+    },
+    "keywords": [
+        "webxr",
+        "wonderland",
+        "components"
+    ],
+    "bugs": {
+        "url": "https://github.com/WonderlandEngine/community-components/issues"
+    },
+    "homepage": "https://github.com/WonderlandEngine/community-components#readme",
+    "wonderlandengine": {},
+    "files": [
+        "dist/**/*.js",
+        "dist/**/*.d.ts"
+    ],
+    "dependencies": {
+        "@types/webxr": "^0.5.0",
+        "@wonderlandengine/api": "^1.0.0-rc.2",
+        "gl-matrix": "^3.3.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.4",
+        "typescript": "^5.0.3"
+    }
+}

@@ -8,30 +8,14 @@ Custom JavaScript components created by the Community!
 
 Instructions on how to use components from this repository.
 
-### Git Submodule (preferred)
+### NPM package
 
 If you already have a git repository set up for your Wonderland Engine
 project, this method allows easily updating later.
 
 ~~~
-git submodule add https://github.com/wonderlandengine/community-components
+npm i --save @wonderlandengine/community-components
 ~~~
-
-And later update:
-
-~~~
-cd community-components
-git pull origin master
-~~~
-
-### Download Zip
-
-Download the repository as zip file and unpack in your project directory.
-
-### Add Script Path
-
-Open `Views > Project Setting` and under "Java Script" add the downloaded folder
-or specific component scripts to your project.
 
 ## Documentation
 
