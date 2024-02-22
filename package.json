@@ -9,7 +9,7 @@
     "scripts": {
         "build:ts": "tsc",
         "build:ts:watch": "tsc --watch",
-        "prepublishOnly": "npm run build:ts",
+        "prepack": "npm run build:ts",
         "pretty": "prettier --config ./prettierrc.json --write ./components"
     },
     "repository": {
