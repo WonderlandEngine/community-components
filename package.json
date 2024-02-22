@@ -1,6 +1,6 @@
 {
     "name": "@wonderlandengine/community-components",
-    "version": "1.0.0-rc.1",
+    "version": "1.0.0",
     "description": "Custom components created by the Wonderland Engine Community!",
     "license": "MIT",
     "main": "./dist/index.js",
@@ -31,8 +31,10 @@
         "dist/**/*.d.ts"
     ],
     "dependencies": {
-        "@types/webxr": "^0.5.0",
-        "@wonderlandengine/api": "^1.0.0-rc.2",
+        "@types/webxr": "^0.5.0"
+    },
+    "peerDependencies": {
+        "@wonderlandengine/api": "^1.1.0",
         "gl-matrix": "^3.3.0"
     },
     "devDependencies": {
