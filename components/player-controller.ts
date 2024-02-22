@@ -22,7 +22,7 @@
 */
 
 import {Component, Object3D} from '@wonderlandengine/api';
-import {property} from '@wonderlandengine/api/decorators.js';
+import {property} from '@wonderlandengine/api/dist/decorators.js';
 import {vec3} from 'gl-matrix';
 
 const tempVec = vec3.create();

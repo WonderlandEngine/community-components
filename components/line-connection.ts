@@ -1,6 +1,6 @@
-import {Component, MeshComponent, Object3D, Type} from '@wonderlandengine/api';
-import {property} from '@wonderlandengine/api/dist/decorators';
-import {quat, quat2, vec3} from 'gl-matrix';
+import {Component, MeshComponent, Object3D} from '@wonderlandengine/api';
+import {property} from '@wonderlandengine/api/dist/decorators.js';
+import {quat, vec3} from 'gl-matrix';
 
 const tempVec = vec3.create();
 const tempQuat = quat.create();
